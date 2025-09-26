@@ -1,0 +1,73 @@
+🚀 From Simple Chatbots to Intelligent Workflows
+
+Experiments with LangChain Memories, Chains, and Gemini
+
+Unlocking the next level of AI apps requires context and multi-step reasoning.
+This repo contains my hands-on experiments with LangChain Memories and Chains, powered by Gemini, to build deeply interactive and intelligent AI workflows.
+
+🔑 What’s Inside
+🧠 Memories Implemented
+
+BufferMemory → Full-context customer support chats.
+
+BufferWindowMemory → Lightweight FAQ bot (last 3 messages only).
+
+TokenBufferMemory → Summarization bot that avoids token/context limits.
+
+SummaryMemory → Assistant that turns long convos into recap notes.
+
+🔗 Chains Built
+
+LLMChain → Resume → Professional Summary.
+
+SimpleSequentialChain → Topic → Outline → Blog Post.
+
+SequentialChain → (Resume + Job Desc) → Tailored Cover Letter.
+
+RouterChain → Auto-route customer queries to the right department.
+
+📂 Repository Structure
+├── notebooks/
+│   ├── memories.ipynb        # Experiments with BufferMemory, TokenBufferMemory, etc.
+│   ├── chains.ipynb          # LLMChain, SequentialChain, RouterChain demos
+├── examples/
+│   ├── customer_support.py   # Full-context chatbot with memory
+│   ├── blog_writer.py        # Topic → Outline → Blog Post generator
+│   ├── cover_letter.py       # Resume + JD → Tailored Cover Letter
+└── README.md
+
+⚡ Getting Started
+1️⃣ Clone the repo
+git clone https://github.com/sharanappabadni/intelligent-ai-workflows.git
+cd langchain-gemini-workflows
+
+2️⃣ Install dependencies
+pip install -r requirements.txt
+
+3️⃣ Set up API keys
+
+Add your Gemini (Google Generative AI) and OpenAI keys as environment variables:
+
+export GOOGLE_API_KEY="your_api_key"
+export OPENAI_API_KEY="your_api_key"
+
+4️⃣ Run examples
+python examples/customer_support.py
+
+🎯 Key Takeaways
+
+Structured memory makes chatbots and assistants contextual.
+
+Chaining LLMs enables multi-step reasoning and automation.
+
+Combining LangChain + Gemini unlocks powerful workflows for real-world apps.
+
+🌟 Demo Use Cases
+
+Customer Support Chatbot with full conversation memory.
+
+AI Blog Writer from a simple topic prompt.
+
+Resume → Cover Letter Generator tailored to a job description.
+
+Smart Query Router for customer support.
