@@ -1,73 +1,87 @@
-🚀 From Simple Chatbots to Intelligent Workflows
+🚀 Intelligent AI Workflows with LangChain + Gemini
 
-Experiments with LangChain Memories, Chains, and Gemini
+This repo explores how to move beyond “toy chatbots” and build intelligent, context-aware AI workflows using LangChain Memories and Chains, powered by Gemini.
 
-Unlocking the next level of AI apps requires context and multi-step reasoning.
-This repo contains my hands-on experiments with LangChain Memories and Chains, powered by Gemini, to build deeply interactive and intelligent AI workflows.
+I experimented with multiple memory types and chain architectures to show how structured memory + multi-step reasoning make AI apps more interactive and useful in real-world workflows.
 
-🔑 What’s Inside
-🧠 Memories Implemented
+🧠 Memories Implemented (Langchain_memory.ipynb)
 
-BufferMemory → Full-context customer support chats.
+BufferMemory → Full-context customer support chats
 
-BufferWindowMemory → Lightweight FAQ bot (last 3 messages only).
+BufferWindowMemory → Lightweight FAQ bot (last 3 messages only)
 
-TokenBufferMemory → Summarization bot that avoids token/context limits.
+TokenBufferMemory → Summarization bot without hitting token/context limits
 
-SummaryMemory → Assistant that turns long convos into recap notes.
+SummaryMemory → Assistant that turns long conversations into recap notes
 
-🔗 Chains Built
+🔗 Chains Built (L3_chains.ipynb)
 
-LLMChain → Resume → Professional Summary.
+LLMChain → Resume → Professional Summary
 
-SimpleSequentialChain → Topic → Outline → Blog Post.
+SimpleSequentialChain → Topic → Outline → Blog Post
 
-SequentialChain → (Resume + Job Desc) → Tailored Cover Letter.
+SequentialChain → Resume + Job Desc → Tailored Cover Letter
 
-RouterChain → Auto-route customer queries to the right department.
+RouterChain → Auto-route customer queries to the right department
 
 📂 Repository Structure
-├── notebooks/
-│   ├── memories.ipynb        # Experiments with BufferMemory, TokenBufferMemory, etc.
-│   ├── chains.ipynb          # LLMChain, SequentialChain, RouterChain demos
-├── examples/
-│   ├── customer_support.py   # Full-context chatbot with memory
-│   ├── blog_writer.py        # Topic → Outline → Blog Post generator
-│   ├── cover_letter.py       # Resume + JD → Tailored Cover Letter
-└── README.md
+├── Langchain_memory.ipynb     # Experiments with Buffer, Window, Token, and Summary memory
+├── L3_chains.ipynb            # Demos of LLMChain, SequentialChains, RouterChain
+├── requirements.txt           # Dependencies
+└── README.md                  # Project overview
 
 ⚡ Getting Started
 1️⃣ Clone the repo
-git clone https://github.com/sharanappabadni/intelligent-ai-workflows.git
-cd langchain-gemini-workflows
+git clone https://github.com/Sharanappabadni/intelligent-ai-workflows.git
+cd intelligent-ai-workflows
 
 2️⃣ Install dependencies
 pip install -r requirements.txt
 
 3️⃣ Set up API keys
 
-Add your Gemini (Google Generative AI) and OpenAI keys as environment variables:
+Create a .env file in the project root and add your keys:
 
-export GOOGLE_API_KEY="your_api_key"
-export OPENAI_API_KEY="your_api_key"
+GOOGLE_API_KEY=your_gemini_api_key
+OPENAI_API_KEY=your_openai_api_key
 
-4️⃣ Run examples
-python examples/customer_support.py
+4️⃣ Run the notebooks
+
+Launch Jupyter Notebook or Jupyter Lab:
+
+jupyter notebook
+
+
+Open Langchain_memory.ipynb or L3_chains.ipynb to explore the experiments.
 
 🎯 Key Takeaways
 
-Structured memory makes chatbots and assistants contextual.
+BufferMemory vs WindowMemory → full vs partial context handling
 
-Chaining LLMs enables multi-step reasoning and automation.
+TokenBufferMemory → smart way to manage context limits
 
-Combining LangChain + Gemini unlocks powerful workflows for real-world apps.
+SummaryMemory → efficient long conversation management
 
-🌟 Demo Use Cases
+Chains turn simple prompts into multi-step intelligent workflows
 
-Customer Support Chatbot with full conversation memory.
+🌟 Example Use Cases
 
-AI Blog Writer from a simple topic prompt.
+Customer support chatbot with memory of past interactions
 
-Resume → Cover Letter Generator tailored to a job description.
+AI blog writer (Topic → Outline → Blog Post)
 
-Smart Query Router for customer support.
+Resume + JD → Tailored Cover Letter Generator
+
+Smart router for customer queries
+
+📌 Roadmap
+
+ Add LangGraph visual workflows
+
+ Integrate vector stores (Weaviate, Pinecone, FAISS)
+
+ Expand agentic workflows with tools
+
+🤝 Contributing
+
+Contributions welcome! Feel free to fork, open issues, or submit PRs.
